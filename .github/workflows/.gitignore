@@ -3,4 +3,3 @@ reports/
 test-results/
 .env
 .env.*
-!config/.env.example

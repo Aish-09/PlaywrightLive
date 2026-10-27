@@ -5,9 +5,9 @@ module.exports = {
   baseUrl: process.env.BASE_URL || 'https://automationexercise.com',
   testUser: {
     // You can set these in a local .env file or GitHub Secrets
-    email: process.env.TEST_USER_EMAIL || 'varam89915@agaexpress.com',
-    password: process.env.TEST_USER_PASSWORD || 'XetKm34@NLnWMH!',
-    username: process.env.TEST_USER_NAME || 'Aishwarya',
-    phonenumber : process.env.TEST_USER_PHONE || '919652770456'
+    email: process.env.TEST_USER_EMAIL || '',
+    password: process.env.TEST_USER_PASSWORD || '',
+    username: process.env.TEST_USER_NAME || '',
+    phonenumber : process.env.TEST_USER_PHONE || ''
   }
 };
