@@ -25,9 +25,18 @@ module.exports = defineConfig({
   // Reporters: print list in terminal, generate HTML report
   reporter: [
     ['list'],
-    ['html', { outputFolder: 'reports/html-report', open: 'never' }]
+    ['html', { outputFolder: 'reports/html-report', open: 'never' }],
+    ['json', { outputFile: 'reports/test-results.json' }],
+    ['allure-playwright', { outputFolder: 'allure-results' }]
   ],
-
+  use: {
+    baseURL: 'https://automationexercise.com',
+    headless: true, // CI/Docker requires headless
+    trace: 'retain-on-failure',
+    screenshot: 'only-on-failure',
+    video: 'retain-on-failure'
+  },
+  
   // Shared settings for all projects
   use: {
     // Base URL to use in actions like `await page.goto('/')`

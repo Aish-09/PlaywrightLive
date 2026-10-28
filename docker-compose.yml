@@ -1,0 +1,11 @@
+services:
+  playwright-tests:
+    build: .
+    environment:
+      - CI=true
+      - TEST_ENV=staging
+    volumes:
+      # Mount reports directory so generated reports persist on your host machine
+      - ./reports:/app/reports
+      - ./allure-results:/app/allure-results
+    command: npx playwright test --reporter=list,html
