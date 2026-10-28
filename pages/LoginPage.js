@@ -1,12 +1,15 @@
-const {expect} = require('@playwright/test');
+const { expect } = require('@playwright/test');
 const { BasePage } = require('./BasePage');
 
 class LoginPage extends BasePage {
+
   /**
    * @param {import('@playwright/test').Page} page
    */
   constructor(page) {
     super(page);
+
+
 
     // Top Navigation
     this.signupLoginLink = page.locator('a[href="/login"]');
@@ -47,22 +50,22 @@ class LoginPage extends BasePage {
     this.accountDeletedHeader = page.locator('h2[data-qa="account-deleted"]');
 
     //Login Page Elements
-    this.LoginPageHeader = page.locator('h2:has-text("Login to your account")');
+    this.loginHeader = page.locator('h2:has-text("Login to your account")');
     this.loginEmailInput = page.locator('input[data-qa="login-email"]');
     this.loginPasswordInput = page.locator('[name="password"]')
     this.loginButton = page.locator('button:has-text("Login")')
-  }
 
+    this.loggedInText = page.locator('a:has-text("Logged in as Aishwarya")');
+
+  }
   async clickSignupLogin() {
     await this.signupLoginLink.click();
   }
-
   async fillInitialSignup(name, email) {
     await this.signupNameInput.fill(name);
     await this.signupEmailInput.fill(email);
     await this.signupButton.click();
   }
-
   async fillAccountDetails(userData) {
     await this.titleGenderMr.check();
     await this.passwordInput.fill(userData.password);
@@ -72,7 +75,6 @@ class LoginPage extends BasePage {
     await this.newsletterCheckbox.check();
     await this.optinCheckbox.check();
   }
-
   async fillAddressDetails(userData) {
     await this.firstNameInput.fill(userData.firstName);
     await this.lastNameInput.fill(userData.lastName);
@@ -85,24 +87,21 @@ class LoginPage extends BasePage {
     await this.mobileNumberInput.fill(userData.mobile);
     await this.createAccountBtn.click();
   }
-
   async proceedAfterAccountCreated() {
     await this.continueBtn.click();
     await this.dismissAdIfPresent();
   }
-
   async deleteAccount() {
     await this.deleteAccountLink.click();
     await this.dismissAdIfPresent();
   }
-
   async login(email, password) {
     await this.loginEmailInput.fill(email);
     await this.loginPasswordInput.fill(password);
     await this.loginButton.click();
     await this.dismissAdIfPresent();
+
   }
 }
 
-// Named export
 module.exports = { LoginPage };
