@@ -1,5 +1,54 @@
-node_modules/
-reports/
-test-results/
+# ==========================================
+# 1. Secrets & Environment Variables (CRITICAL)
+# ==========================================
 .env
 .env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# ==========================================
+# 2. Jenkins & CI Artifacts
+# ==========================================
+# Jenkins local runner / workspace files
+.jenkins/
+.jenkins-cache/
+jenkins.log
+workspace/
+
+# Build and report artifacts generated during runs
+build/
+dist/
+reports/
+allure-results/
+allure-report/
+test-results/
+coverage/
+*.log
+
+# ==========================================
+# 3. Docker & Containers
+# ==========================================
+# Docker bind mounts and runtime state
+.docker/
+docker-volumes/
+*.tar.gz
+*.cid
+*.pid
+
+# Docker Compose override files with local configs
+docker-compose.override.yml
+
+# ==========================================
+# 4. Playwright & Node (if running Playwright tests)
+# ==========================================
+node_modules/
+playwright-report/
+blob-report/
+playwright/.cache/
+test-results/
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db
