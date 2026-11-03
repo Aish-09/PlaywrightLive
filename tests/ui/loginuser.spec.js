@@ -24,5 +24,6 @@ test.describe('Login Functionality', () => {
     // 5. Verify user is logged in
     await expect(loginPage.loggedInText).toBeVisible();
     await expect(loginPage.loggedInText).toContainText(config.testUser.username);
+    await page.screenshot({ path: 'screenshots/login_success.png' });
   });
 });
