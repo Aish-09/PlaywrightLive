@@ -9,8 +9,6 @@ class LoginPage extends BasePage {
   constructor(page) {
     super(page);
 
-
-
     // Top Navigation
     this.signupLoginLink = page.locator('a[href="/login"]');
     this.loggedInText = this.page.locator('li:has-text("Logged in as") a, a:has-text("Logged in as")');
@@ -55,7 +53,7 @@ class LoginPage extends BasePage {
     this.loginPasswordInput = page.locator('[name="password"]')
     this.loginButton = page.locator('button:has-text("Login")')
 
-    this.loggedInText = page.locator('a:has-text("Logged in as Aishwarya")');
+    this.loggedInText = this.page.locator('li:has-text("Logged in as") a, a:has-text("Logged in as")');
 
   }
   async clickSignupLogin() {

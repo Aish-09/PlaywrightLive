@@ -1,4 +1,11 @@
 // playwright.config.js
+import dotenv from 'dotenv';
+import path from 'path';
+
+// Read from default .env file
+dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+// playwright.config.js
 const { defineConfig, devices } = require('@playwright/test');
 
 module.exports = defineConfig({
