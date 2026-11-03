@@ -1,5 +1,5 @@
 // tests/ui/loginUser.spec.js
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('../../fixtures/baseFixture');
 const { LoginPage } = require('../../pages/LoginPage');
 const config = require('../../config/env.config');
 

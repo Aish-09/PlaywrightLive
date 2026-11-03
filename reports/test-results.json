@@ -3,7 +3,9 @@
     "argv": [
       "C:\\nvm4w\\nodejs\\node.exe",
       "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\node_modules\\@playwright\\test\\cli.js",
-      "test"
+      "test",
+      "ProductsCatalog",
+      "--headed"
     ],
     "configFile": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\playwright.config.js",
     "rootDir": "C:/Users/Aishwaraya/Documents/Playwright/playwright-automation/tests",
@@ -17,7 +19,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
@@ -26,7 +28,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -46,7 +48,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 3
+          "actualWorkers": 1
         },
         "name": "chromium",
         "testDir": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests",
@@ -118,99 +120,6 @@
   },
   "suites": [
     {
-      "title": "ui\\loginuser.spec.js",
-      "file": "ui/loginuser.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "Login Functionality",
-          "file": "ui/loginuser.spec.js",
-          "line": 6,
-          "column": 6,
-          "specs": [
-            {
-              "title": "TC02: Login User with correct email and password @smoke",
-              "ok": false,
-              "tags": [
-                "smoke"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 11356,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2:has-text(\"Login to your account\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2:has-text(\"Login to your account\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2:has-text(\"Login to your account\")')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2:has-text(\"Login to your account\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2:has-text(\"Login to your account\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2:has-text(\"Login to your account\")')\u001b[22m\n\n    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\loginuser.spec.js:18:41",
-                        "location": {
-                          "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\loginuser.spec.js",
-                          "column": 41,
-                          "line": 18
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// 3. Verify 'Login to your account' is visible\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39mloginHeader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39mloginHeader)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Login to your account'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 4. Perform Login using clean config data (NO hardcoding!)\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\loginuser.spec.js",
-                            "column": 41,
-                            "line": 18
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2:has-text(\"Login to your account\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2:has-text(\"Login to your account\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2:has-text(\"Login to your account\")')\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     \u001b[90m// 3. Verify 'Login to your account' is visible\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39mloginHeader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39mloginHeader)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Login to your account'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[90m// 4. Perform Login using clean config data (NO hardcoding!)\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\loginuser.spec.js:18:41\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-02T08:55:46.981Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-loginuser-Login-Functio-5aa81-ct-email-and-password-smoke-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-loginuser-Login-Functio-5aa81-ct-email-and-password-smoke-chromium\\error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-loginuser-Login-Functio-5aa81-ct-email-and-password-smoke-chromium\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\loginuser.spec.js",
-                        "column": 41,
-                        "line": 18
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "7176c24526edf7d3f3a8-d1622ffb11c450b13560",
-              "file": "ui/loginuser.spec.js",
-              "line": 7,
-              "column": 3
-            }
-          ]
-        }
-      ]
-    },
-    {
       "title": "ui\\ProductsCatalog.spec.js",
       "file": "ui/ProductsCatalog.spec.js",
       "column": 0,
@@ -225,7 +134,7 @@
           "specs": [
             {
               "title": "TC01: Verify Products Page and Product Details @smoke",
-              "ok": false,
+              "ok": true,
               "tags": [
                 "smoke"
               ],
@@ -238,60 +147,20 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "failed",
-                      "duration": 12247,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2.title:has-text(\"All Products\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2.title:has-text(\"All Products\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2.title:has-text(\"All Products\")')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2.title:has-text(\"All Products\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2.title:has-text(\"All Products\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2.title:has-text(\"All Products\")')\u001b[22m\n\n    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\ProductsCatalog.spec.js:15:53",
-                        "location": {
-                          "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\ProductsCatalog.spec.js",
-                          "column": 53,
-                          "line": 15
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m         \u001b[90m// 2. Verify that user is navigated to ALL PRODUCTS page successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m         \u001b[36mawait\u001b[39m expect(productPage\u001b[33m.\u001b[39mallProductsHeader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m expect(productPage\u001b[33m.\u001b[39mallProductsHeader)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'All Products'\u001b[39m\u001b[33m,\u001b[39m{ignoreCase\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m productPage\u001b[33m.\u001b[39mfirstProductViewProduct()\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\ProductsCatalog.spec.js",
-                            "column": 53,
-                            "line": 15
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('h2.title:has-text(\"All Products\")')\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('h2.title:has-text(\"All Products\")') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('h2.title:has-text(\"All Products\")')\u001b[22m\n\n\n\u001b[0m \u001b[90m 13 |\u001b[39m\n \u001b[90m 14 |\u001b[39m         \u001b[90m// 2. Verify that user is navigated to ALL PRODUCTS page successfully\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m         \u001b[36mawait\u001b[39m expect(productPage\u001b[33m.\u001b[39mallProductsHeader)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m         \u001b[36mawait\u001b[39m expect(productPage\u001b[33m.\u001b[39mallProductsHeader)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'All Products'\u001b[39m\u001b[33m,\u001b[39m{ignoreCase\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m productPage\u001b[33m.\u001b[39mfirstProductViewProduct()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\ProductsCatalog.spec.js:15:53\u001b[22m"
-                        }
-                      ],
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6962,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T08:55:46.932Z",
+                      "startTime": "2026-11-03T06:24:57.789Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-ProductsCatalog-Product-6b63d-e-and-Product-Details-smoke-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-ProductsCatalog-Product-6b63d-e-and-Product-Details-smoke-chromium\\error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-ProductsCatalog-Product-6b63d-e-and-Product-Details-smoke-chromium\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\ProductsCatalog.spec.js",
-                        "column": 53,
-                        "line": 15
-                      }
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "00c6341f83ce2e889efe-e7f1a6d56fb5af9f6749",
@@ -302,108 +171,15 @@
           ]
         }
       ]
-    },
-    {
-      "title": "ui\\registeruser.spec.js",
-      "file": "ui/registeruser.spec.js",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "User Registration Flow",
-          "file": "ui/registeruser.spec.js",
-          "line": 5,
-          "column": 6,
-          "specs": [
-            {
-              "title": "TC01: Register User and Delete Account @smoke",
-              "ok": false,
-              "tags": [
-                "smoke"
-              ],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "failed",
-                      "duration": 11650,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.signup-form h2')\nExpected: \u001b[32m\"New User Signup!\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.signup-form h2') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.signup-form h2')\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.signup-form h2')\nExpected: \u001b[32m\"New User Signup!\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.signup-form h2') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.signup-form h2')\u001b[22m\n\n    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\registeruser.spec.js:35:42",
-                        "location": {
-                          "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\registeruser.spec.js",
-                          "column": 42,
-                          "line": 35
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[90m// 4 & 5: Click 'Signup / Login' and verify 'New User Signup!' heading\u001b[39m\n \u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickSignupLogin()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39msignupHeader)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'New User Signup!'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[90m// 6 & 7: Enter name and email address, click 'Signup'\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfillInitialSignup(testUser\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39m testUser\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\registeruser.spec.js",
-                            "column": 42,
-                            "line": 35
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.signup-form h2')\nExpected: \u001b[32m\"New User Signup!\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" locator('.signup-form h2') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.signup-form h2')\u001b[22m\n\n\n\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[90m// 4 & 5: Click 'Signup / Login' and verify 'New User Signup!' heading\u001b[39m\n \u001b[90m 34 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mclickSignupLogin()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m     \u001b[36mawait\u001b[39m expect(loginPage\u001b[33m.\u001b[39msignupHeader)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'New User Signup!'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m\n \u001b[90m 37 |\u001b[39m     \u001b[90m// 6 & 7: Enter name and email address, click 'Signup'\u001b[39m\n \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m loginPage\u001b[33m.\u001b[39mfillInitialSignup(testUser\u001b[33m.\u001b[39mname\u001b[33m,\u001b[39m testUser\u001b[33m.\u001b[39memail)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\registeruser.spec.js:35:42\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-11-02T08:55:46.896Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-registeruser-User-Regis-c0f59-er-and-Delete-Account-smoke-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-registeruser-User-Regis-c0f59-er-and-Delete-Account-smoke-chromium\\error-context.md"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\test-results\\ui-registeruser-User-Regis-c0f59-er-and-Delete-Account-smoke-chromium\\trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\Aishwaraya\\Documents\\Playwright\\playwright-automation\\tests\\ui\\registeruser.spec.js",
-                        "column": 42,
-                        "line": 35
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "6fa3d8aa510810bdb87e-4e3455f3015959c1ecdb",
-              "file": "ui/registeruser.spec.js",
-              "line": 6,
-              "column": 3
-            }
-          ]
-        }
-      ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-02T08:55:46.350Z",
-    "duration": 21740.758,
-    "expected": 0,
+    "startTime": "2026-11-03T06:24:57.404Z",
+    "duration": 11361.689,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 3,
+    "unexpected": 0,
     "flaky": 0
   }
 }

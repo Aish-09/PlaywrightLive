@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('../../fixtures/baseFixture');
 const { ProductPage } = require('../../pages/ProductPage');
 
 test.describe('Products Catalog', () => {

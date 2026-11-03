@@ -1,5 +1,5 @@
 // tests/ui/registerUser.spec.js
-const { test, expect } = require('@playwright/test');
+const { test, expect } = require('../../fixtures/baseFixture');;
 const { LoginPage } = require('../../pages/LoginPage');
 
 test.describe('User Registration Flow', () => {
