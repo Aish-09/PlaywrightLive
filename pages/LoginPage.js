@@ -13,7 +13,7 @@ class LoginPage extends BasePage {
 
     // Top Navigation
     this.signupLoginLink = page.locator('a[href="/login"]');
-    this.loggedInText = page.locator('li:has-text("Logged in as")');
+    this.loggedInText = this.page.locator('li:has-text("Logged in as") a, a:has-text("Logged in as")');
     this.deleteAccountLink = page.locator('a[href="/delete_account"]');
     this.continueBtn = page.locator('[data-qa="continue-button"]');
 

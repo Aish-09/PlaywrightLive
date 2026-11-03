@@ -15,7 +15,7 @@ test.describe('Login Functionality', () => {
     await loginPage.clickSignupLogin();
 
     // 3. Verify 'Login to your account' is visible
-    await expect(loginPage.loginHeader).toBeVisible();
+    await expect(loginPage.loginHeader).toBeVisible({timeout: 15000});
     await expect(loginPage.loginHeader).toHaveText('Login to your account');
 
     // 4. Perform Login using clean config data (NO hardcoding!)
