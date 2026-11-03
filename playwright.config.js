@@ -43,7 +43,7 @@ module.exports = defineConfig({
     baseURL: 'https://automationexercise.com',
 
     // Run headed locally so you can see browser actions; headless in CI
-    headless: false,
+    headless: true,
 
     // Collect trace when retrying the failed test
     trace: 'retain-on-failure',
